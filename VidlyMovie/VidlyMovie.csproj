@@ -168,12 +168,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707101918106_InitialModel.cs" />
+    <Compile Include="Migrations\201707101918106_InitialModel.Designer.cs">
+      <DependentUpon>201707101918106_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707101940585_MembershipTypeId.cs" />
+    <Compile Include="Migrations\201707101940585_MembershipTypeId.Designer.cs">
+      <DependentUpon>201707101940585_MembershipTypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707101943278_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201707101943278_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201707101943278_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707102200231_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201707102200231_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201707102200231_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -244,6 +262,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +275,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707101918106_InitialModel.resx">
+      <DependentUpon>201707101918106_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707101940585_MembershipTypeId.resx">
+      <DependentUpon>201707101940585_MembershipTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707101943278_PopulateMembershipTypes.resx">
+      <DependentUpon>201707101943278_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707102200231_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201707102200231_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -43,6 +43,8 @@
 </body>
 </html>*@
 
+
+@*@model VidlyMovie.ViewModels.RandomMovieViewModel*@
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +55,7 @@
     @Scripts.Render("~/bundles/modernizer")
 </head>
 <body>
+    @*@Html.Partial("_NavBar", Model.Movie)*@
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
