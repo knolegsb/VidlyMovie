@@ -1,9 +1,18 @@
-﻿@model VidlyMovie.Models.Movie
+﻿@*@using VidlyMovie.Models
+@model VidlyMovie.Models.Movie*@
+@model VidlyMovie.ViewModels.RandomMovieViewModel
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Random</h2>
-<h2>@Model.Name</h2>
+@*<h2>@Model.Name</h2>
+<h2>@(((Movie) ViewData["Movie"]).Name)</h2>
+@ViewBag.RandomMovie.Name;*@
 
+<h2>@Model.Movie.Name</h2>
+@foreach(var m in Model.Customers)
+{
+    @m.Name <br />
+}
