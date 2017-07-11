@@ -195,6 +195,14 @@
     <Compile Include="Migrations\201707102240038_PopulateMembershipTypesName.Designer.cs">
       <DependentUpon>201707102240038_PopulateMembershipTypesName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707110034435_AddMovieTable.cs" />
+    <Compile Include="Migrations\201707110034435_AddMovieTable.Designer.cs">
+      <DependentUpon>201707110034435_AddMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707110037085_PopulateGenres.cs" />
+    <Compile Include="Migrations\201707110037085_PopulateGenres.Designer.cs">
+      <DependentUpon>201707110037085_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -268,6 +276,9 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -295,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707102240038_PopulateMembershipTypesName.resx">
       <DependentUpon>201707102240038_PopulateMembershipTypesName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707110034435_AddMovieTable.resx">
+      <DependentUpon>201707110034435_AddMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707110037085_PopulateGenres.resx">
+      <DependentUpon>201707110037085_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
