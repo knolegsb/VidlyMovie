@@ -1,4 +1,4 @@
-﻿@model VidlyMovie.Models.Customer
+﻿@model VidlyMovie.ViewModels.NewCustomerViewModel
 
 @{
     ViewBag.Title = "New";
@@ -9,21 +9,26 @@
 @using (Html.BeginForm("Create", "Customers"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Customer.Name)
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.BirthDate)
-        @Html.TextBoxFor(m => m.BirthDate, new { @class="form-control" })
+        @Html.LabelFor(m => m.Customer.BirthDate)
+        @Html.TextBoxFor(m => m.Customer.BirthDate, new { @class="form-control" })
     </div>
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(m => m.IsSubscribedToNewsLetter)
         @Html.CheckBoxFor(m => m.IsSubscribedToNewsLetter, new { @class = "form-control" })
-    </div>
+    </div>*@
     <div class="checkbox">
         <label>
-            <input type="checkbox" />Check me out
+            @*<input type="checkbox" />Check me out*@
+            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter) Subscribed to Newsletter?
         </label>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
     </div>
 }
 

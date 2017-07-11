@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using VidlyMovie.Models;
 using System.Data.Entity;
+using VidlyMovie.ViewModels;
 
 namespace VidlyMovie.Controllers
 {
@@ -52,7 +53,13 @@ namespace VidlyMovie.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+
+            return View(viewModel);
         }
     }
 }
