@@ -89,6 +89,7 @@ namespace VidlyMovie.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         //public ActionResult Save(UpdateCustomerDto customer)
         {
