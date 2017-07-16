@@ -14,7 +14,7 @@ namespace VidlyMovie.Dtos
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
-        public bool IsSubscribedToNewsletter { get; set; }
+        public bool IsSubscribedToNewsLetter { get; set; }
 
         //[Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
