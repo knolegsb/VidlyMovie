@@ -24,6 +24,7 @@ namespace VidlyMovie.Controllers
         }
 
         // GET: Customers
+        [Authorize]
         public ViewResult Index()
         {
             //var customers = GetCustomers();
