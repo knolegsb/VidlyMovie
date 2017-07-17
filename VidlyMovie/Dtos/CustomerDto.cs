@@ -18,7 +18,7 @@ namespace VidlyMovie.Dtos
 
         //[Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
-        //public MembershipTypeDto MembershipType { get; set; }
+        public MembershipTypeDto MembershipType { get; set; }
 
         //[Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
